@@ -26,7 +26,7 @@ void Greedy::recursiveConstruction(int node, int level)
 			/* CASE 1) -- FIND SPLIT WITH BEST INFORMATION GAIN FOR NUMERICAL ATTRIBUTE c */
 			 
 			// Define some data structures
-			std::vector <std::pair<double, int>> orderedSamples;		// Order of the samples according to attribute c
+			std::vector <std::pair<double, int> > orderedSamples;		// Order of the samples according to attribute c
 			std::set<double> attributeLevels;							// Store the possible levels of this attribute among the samples (will allow to "skip" samples with equal attribute value)
 			for (int s : solution->tree[node].samples)
 			{
