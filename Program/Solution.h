@@ -79,7 +79,7 @@ public:
 	std::vector <Node> tree;
 	std::vector <int> solutionAttributeList; // Solution Representation as a tree of attributes used for split at each node
 	
-	// Solution quality
+	// Solution quality metrics
 	int nbMisclassifiedSamples = 0; 
 	double solutionAccuracy = 0.;
 
@@ -145,10 +145,11 @@ public:
 	// Prints the Solution Representation (attributes lits) in the console
 	void printTreeAttributes()
 	{
-		std::cout << "Tree Attributes: ";
+		//std::cout << "Tree Attributes: ";
+		std::cout << "[ ";
 		for (int d = 0; d <= tree.size(); d++)
 			std::cout << solutionAttributeList[d] << ";";
-		std::cout << std::endl;
+		std::cout << " ]" << std::endl;
 	}
 
 	// Prints the final solution (whole tree) and exports some summary results to fileName

@@ -10,8 +10,7 @@ class LocalSearch
 {
 private:
 
-	Params * params;		 // Access to the problem and dataset parameters
-	Solution * initialSolution;	 // Initial solution to the Local Search
+    Params * params;		 // Access to the problem and dataset parameters
 
 public:
 
@@ -25,10 +24,13 @@ public:
     End While
     Return Final solution found (local optima) 
     */
-    Solution applyLocalImprovement(bool verbose=false); // Run local improvement algorithm
+    Solution applyLocalImprovement(Solution * initialSolution, bool verbose=false); // Run local improvement algorithm
+
+    // Multi-start local search
+    Solution runMultistart(int num_trials, bool verbose=false);
 
 	// Constructor
-	LocalSearch(Params * params, Solution * initialSolution): params(params), initialSolution(initialSolution){};
+	LocalSearch(Params * params): params(params){};
 };
 
 #endif

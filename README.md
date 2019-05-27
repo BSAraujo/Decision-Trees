@@ -1,5 +1,30 @@
 
-# Purpose
+# Project 1 -- INF 2980
+
+Metaheuristics Course - 2019.1  
+Name: Breno Serrano de Araujo  
+Professor: Thibaut Vidal  
+
+# Instructions
+
+This is the implementation of some heuristics and metaheuristic methods applied to Decision Tree optimization.
+
+The two main methods implemented are in the following files:  
+
+- ```LocalSearch.cpp```: contains the implementation of Local Search and Multi-Start LS;
+- ```GeneticAlgorithm.cpp```: contains the implementation of the GA.
+
+All the code is well documented.
+The main.cpp contains the main script that runs the GA method. To run other methods, you need to use the other main scripts.
+
+- ```main_greedy.cpp```: contains the main program for the original CART provided;
+- ```main_local_search.cpp```: contains the main program for the local search method, starting from the CART solution;
+- ```main_multistart_ls.cpp```: contains the main program for the multistart local search;
+
+To run these other methods you can rename the above files to ```main.cpp```, recompile and run. This is very manual and not ideal but I did not have more time to automate everything.
+
+
+# Original text
 
 This is a simplistic greedy decision tree implementation (similar to CART, but using pre-pruning via a fixed height limit rather than post-pruning).
 The purpose of this code is to serve as a starting point for the first project of INF2980.

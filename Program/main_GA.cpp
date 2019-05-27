@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
         params.startTime = clock();
 
         GeneticAlgorithm ga(&params);
-        Solution bestSolution = ga.run(200, 1000, 0.4, false); // max_trials, populationSize, percentageSelection, verbose
+        Solution bestSolution = ga.run(10, 10000, 0.4, false); // max_trials, populationSize, percentageSelection, verbose
 
 		std::cout << "Accuracy of BEST Solution: " << bestSolution.solutionAccuracy << "\t";
 		bestSolution.printTreeAttributes();

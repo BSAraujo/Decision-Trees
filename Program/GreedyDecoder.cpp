@@ -1,10 +1,24 @@
 #include "GreedyDecoder.h"
 
+/* Greedy Decoder
+# Arguments:
+bool useAttList:    Whether to use the attribute list solution representation.
+                    Specifies if the solution should be constructed based on a solution representation as a tree of attribute choices
+bool randomAtt:     Whether to use random attributes for split. 
+                    Specifies if the choice of attributes for the splits are to be chosen at random
+
+The Greedy Decoder has three modes of execution.
+1. If randomAtt is true, then attributes are chosen at random. However, the threshold values are still in chosen greedily;
+2. If randomAtt is false and useAttList is true, then the solution is constructed based on a solution representation,
+defined in the Solution structure as a tree of attribute choices (solutionAttributeList); 
+the thresholds for split are "decoded" using a greedy constructor;
+3. If randomAtt is false and useAttList is false, then this is the basic original CART provided;
+*/ 
 void GreedyDecoder::run(bool useAttList/*=false*/, bool randomAtt/*=false*/)
 {
 	// Call the recursive procedure on the root node at level 0
 	recursiveConstruction(0,0,useAttList,randomAtt); // use attribute list to construct greedy solution
-    solution->updateSolutionMetrics(); // update solution accuracy metrics
+    solution->updateSolutionMetrics(); // update accuracy metrics in the solution structure
 }
 
 double GreedyDecoder::calculateBestSplitContinuous(int atributeIndex, int node, const std::vector<int> & samples, 
