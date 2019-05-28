@@ -21,7 +21,7 @@ The main.cpp contains the main script that runs the GA method. To run other meth
 - ```main_local_search.cpp```: contains the main program for the local search method, starting from the CART solution;
 - ```main_multistart_ls.cpp```: contains the main program for the multistart local search;
 
-To run these other methods you can rename the above files to ```main.cpp```, recompile and run. This is very manual and not ideal but I did not have more time to automate everything.
+To run these other methods you can rename the above files to ```main.cpp```, recompile and run. 
 
 
 # Original text
